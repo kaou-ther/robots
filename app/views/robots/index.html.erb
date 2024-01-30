@@ -1,0 +1,11 @@
+<%= "Here are the robots you can rent or buy today" %>
+<% @robots.each do |robot| %>
+<%= link_to "#{robot.name}, #{robot.price}", robot_path %>
+<% end %>
+<div>
+<%= "Choose a category:" %>
+<%# <%= simple_form_for(robot) do |f| %>
+  <%# <%= f.input :category %>
+<%# <% end %>
+</div>
+<%= link_to "Home", root_path %>

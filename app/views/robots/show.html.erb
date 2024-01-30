@@ -1,0 +1,11 @@
+<%= "Very nice choice!" %>
+<%= @robot.name %>
+<%= @robot.category %>
+<%= @robot.description %>
+<%= @robot.price %>
+<%= link_to "Delete",
+  robot_path(@robot),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
+<%= link_to "Back to the list", robots_path %>
+<%= link_to "Home", root_path %>
