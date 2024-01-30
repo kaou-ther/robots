@@ -1,0 +1,7 @@
+<%= "Your order is cooking" %>
+<% @orders.each do |order| %>
+<%= link_to order_path(order) %>
+<% end %>
+<div>
+</div>
+<%= link_to "Home", root_path %>

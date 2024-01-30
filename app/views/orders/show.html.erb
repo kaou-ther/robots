@@ -1,0 +1,10 @@
+<%= "Very nice choice!" %>
+<%= @order.start_date %>
+<%= @order.end_date %>
+<%= @order.status %>
+<%= link_to "Delete",
+  order_path(@order),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
+<%= link_to "Back to the list", orders_path %>
+<%= link_to "Home", root_path %>
