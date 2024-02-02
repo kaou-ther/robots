@@ -12,19 +12,25 @@ class RobotsController < ApplicationController
   def create
     @robot = Robot.new(robot_params)
     @robot.save
+    redirect_to robot_path(@robot)
   end
 
   def show
+    set_robot
   end
 
   def edit
+    set_robot
   end
 
   def update
-    @robot.update(params[:robot])
+    set_robot
+    @robot.update(robot_params)
+    redirect_to robot_path(@robot)
   end
 
   def destroy
+    set_robot
     @robot.destroy
     redirect_to robots_path, status: :see_other
   end
