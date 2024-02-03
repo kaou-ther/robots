@@ -2,6 +2,15 @@
 <% @orders.each do |order| %>
 <%= link_to order_path(order) %>
 <% end %>
-<div>
+<div id="orders">
+  <% @orders.each do |order| %>
+    <%= render order %>
+    <p>
+      <%= link_to "Show this order", order %>
+    </p>
+  <% end %>
 </div>
+
+<button type="button" class="btn btn-outline-primary"><%= link_to "Place a new order", new_order_path  %></button>
+
 <%= link_to "Home", root_path %>
