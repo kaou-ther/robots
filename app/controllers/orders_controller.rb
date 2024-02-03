@@ -22,7 +22,8 @@ class OrdersController < ApplicationController
   end
 
   def update
-    @order.update(params[:order])
+    @order.update(order_params)
+    redirect_to order_path(@order)
   end
 
   def destroy

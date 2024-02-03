@@ -1,12 +1,9 @@
 <%= "Your order is cooking" %>
-<% @orders.each do |order| %>
-<%= link_to order_path(order) %>
-<% end %>
+
 <div id="orders">
   <% @orders.each do |order| %>
-    <%= render order %>
     <p>
-      <%= link_to "Show this order", order %>
+      <%= link_to order_path(order), order %>
     </p>
   <% end %>
 </div>
