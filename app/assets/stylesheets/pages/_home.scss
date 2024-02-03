@@ -1,1 +1,17 @@
 // Specific CSS for your home-page
+body {
+  font-family: Helvetica;
+  color: black;
+  text-align: center;
+}
+.banner {
+  background-image: url("https://as2.ftcdn.net/v2/jpg/05/86/16/61/1000_F_586166146_q7rPBhOZV7e3uE9m4pyhjHPwekarPMD5.jpg");
+  height: 200px;
+}
+
+.btn {
+  background: lightcoral;
+  color: black;
+  width: 100px;
+  border-radius: 15px;
+}

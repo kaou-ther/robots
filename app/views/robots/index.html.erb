@@ -1,6 +1,6 @@
 <%= "Here are the robots you can rent or buy today" %>
 <% @robots.each do |robot| %>
-<%= link_to "#{robot.name}, #{robot.price}", robot_path %>
+<p class= "btn"><%= link_to "#{robot.name}, #{robot.price}", robot_path %></p>
 <% end %>
 <div>
 <%= "Choose a category:" %>
@@ -8,5 +8,5 @@
   <%# <%= f.input :category %>
 <%# <% end %>
 </div>
-<%= link_to "New robot", new_robot_path%>
-<%= link_to "Home", root_path %>
+<p class= "btn"><%= link_to "New robot", new_robot_path%></p>
+<p class= "btn"><%= link_to "Home", root_path %></p>
