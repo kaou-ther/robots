@@ -6,11 +6,12 @@
     </div>
   </div>
 </div>
-<ol class= "cards">
+<ul class= "cards">
   <% @robots.each do |robot| %>
-  <li class= "btn"><%= link_to "#{robot.name}", robot, class: "link-color" %><br><%= "#{robot.price.round}€" %></li>
+  <div id="card-type"><%= link_to "#{robot.name} #{robot.price.round}€", robot, class: "link-color" %>
+  </div>
   <% end %>
-</ol>
+</ul>
 <div>
 <%# <%= "Choose a category:" %>
 <%# <%= simple_form_for(robot) do |f| %>
