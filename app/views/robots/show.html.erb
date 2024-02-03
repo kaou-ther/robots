@@ -3,11 +3,11 @@
 <%= @robot.category %>
 <%= @robot.description %>
 <%= @robot.price %>
-<%= link_to "Order this robot", new_order_path %>
-<%= link_to "Edit robot", edit_robot_path%>
-<%= link_to "Delete",
-  robot_path(@robot),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-%>
+
+<%= link_to "Order this robot", new_robot_order_path(@robot) %>
+
+<%= link_to "Edit robot", edit_robot_path(@robot) %>
+<%= link_to "Delete", robot_path(@robot), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+
 <%= link_to "Back to robots list", robots_path %>
 <%= link_to "Home", root_path %>

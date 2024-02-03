@@ -2,17 +2,25 @@ class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 
   def index
-    @orders = Order.all
+    @user = current_user
+    @orders = @user.orders
   end
 
   def new
+    @robot = Robot.find(params[:robot_id])
     @order = Order.new
   end
 
   def create
     @order = Order.new(order_params)
-    @order.save
-    redirect_to orders_path
+    @robot = Robot.find(params[:robot_id])
+    @order.robot = @robot
+    @order.user = current_user
+    if @order.save
+      redirect_to orders_path
+    else
+      render :new
+    end
   end
 
   def show
