@@ -8,6 +8,10 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
+User.destroy_all
+Robot.destroy_all
+Order.destroy_all
+
 jack = User.create(first_name: "Jack", last_name: "Smith", address: "10, drive", email: "jack@crazyrobots.net", phone_number: "+1652148852", password: "password1")
 john = User.create(first_name: "John", last_name: "O'neil", address: "6, crescent", email: "john@crazyrobots.net", phone_number: "+178521269845", password: "password2")
 erica = User.create(first_name: "Erica", last_name: "Mint", address: "7, grove", email: "erica@crazyrobots.net", phone_number: "+1584255455", password: "password3")

@@ -5,7 +5,7 @@
   </div>
 </div>
 
-<p id="big-size"><strong><%= "Here is your order" %></strong><br>
+<p id="big-size"><strong><%= "Here is your order" %></strong><br></p>
 
 <div class="container">
   <div class="row">
@@ -14,13 +14,13 @@
       <%= "start date: #{@order.start_date}" %><br>
       <%= "end date: #{@order.end_date}" %><br>
       <%= "status: #{@order.status}" %><br>
+      <%= "robot name: #{@order.robot.name}" %>
+      <%= "robot description: #{@order.robot.description}" %>
       </div>
     </div>
   </div>
 </div>
 
 <p class= "btn small-btn"><%= link_to "Edit", edit_order_path(@order), class: "link-color" %></p>
-<p class= "btn small-btn"><%= link_to "Delete",
-  order_path(@order),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "link-color"
-%></p>
+<p class= "btn small-btn"><%= link_to "Delete", order_path(@order),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "link-color"%></p>

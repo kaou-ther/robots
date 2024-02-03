@@ -3,11 +3,8 @@
 <%= @robot.category %>
 <%= @robot.description %>
 <%= @robot.price %>
-<%= link_to "Order this robot", new_order_path, class: "link-color" %>
-<%= link_to "Edit robot", edit_robot_path, class: "link-color" %>
-<%= link_to "Delete",
-  robot_path(@robot),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "link-color"
-%>
+<%= link_to "Order this robot", new_robot_order_path(@robot), class: "link-color" %>
+<%= link_to "Edit robot", edit_robot_path(@robot), class: "link-color" %>
+<%= link_to "Delete", robot_path(@robot), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "link-color" %>
 <%= link_to "Back to robots list", robots_path, class: "link-color" %>
 <%= link_to "Home", root_path, class: "link-color" %>

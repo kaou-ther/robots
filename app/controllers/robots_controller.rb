@@ -11,8 +11,12 @@ class RobotsController < ApplicationController
 
   def create
     @robot = Robot.new(robot_params)
-    @robot.save
-    redirect_to robots_path(@robot)
+    @robot.user = current_user
+    if @robot.save
+      redirect_to robot_path(@robot)
+    else
+      render :new
+    end
   end
 
   def show
