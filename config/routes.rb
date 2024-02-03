@@ -11,5 +11,8 @@ Rails.application.routes.draw do
   # root "posts#index"
   resources :robots
   resources :users
-  resources :orders
+  resources :orders, only: [:index, :destroy, :edit, :update, :show]
+  resources :robots, only: [] do
+    resources :orders, only: [:new, :create]
+  end
 end

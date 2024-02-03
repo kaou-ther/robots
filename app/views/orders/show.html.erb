@@ -4,6 +4,9 @@
 <%= @order.start_date %>
 <%= @order.end_date %>
 <%= @order.status %>
+<%= @order.robot.name %>
+<%= @order.robot.description %>
+
 <%= link_to "Delete",
   order_path(@order),
   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
