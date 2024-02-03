@@ -3,15 +3,53 @@ body {
   font-family: Helvetica;
   color: black;
   text-align: center;
-}
-.banner {
   background-image: url("https://as2.ftcdn.net/v2/jpg/05/86/16/61/1000_F_586166146_q7rPBhOZV7e3uE9m4pyhjHPwekarPMD5.jpg");
-  height: 200px;
+  background-size: cover;
+  height: 500px;
+  width:100%;
 }
-
 .btn {
   background: lightcoral;
-  color: black;
-  width: 100px;
+  font-style: black;
   border-radius: 15px;
+  width: 300px;
+  height: 40px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.btn:hover {
+  background-color: lightyellow;
+  color: black;
+}
+.big-btn {
+  width: 300px;
+  height: 40px;
+}
+.small-btn {
+  width: 150px;
+  height: 40px;
+  margin-right: 20px;
+  margin-left: 0px;
+}
+#btn-robot{
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.link-color {
+  color: #000;
+}
+#title{
+  margin-bottom: 50px;
+  font-size: 30px;
+}
+ol li.btn {
+  display: block; /* Make each <li> element a block-level element */
+  margin-bottom: 10px; /* Optional: add some space between items */
+}
+.see {
+  background-color: white;
+  margin-bottom: 50px;
+}
+#big-size {
+  font-size: 30px;
 }
