@@ -1,7 +1,13 @@
-<%= simple_form_for @robot do |f| %>
-  <%= f.input :name %>
-  <%= f.input :category %>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.submit %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+    <%= simple_form_for @robot do |f| %>
+      <%= f.input :name %>
+      <%= f.input :category %>
+      <%= f.input :description %>
+      <%= f.input :price %>
+      <%= f.submit %>
+    <% end %>
+    </div>
+  </div>
+</div>
