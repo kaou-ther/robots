@@ -1,13 +1,14 @@
 <div class="border-bottom border-black bg-white">
-<div class="container d-flex py-1">
-<p class= "btn small-btn"><%= link_to "Home", root_path, class: "link-color" %></p>
-<p class= "btn small-btn"><%= link_to "New robot", new_robot_path, class: "link-color" %></p>
-<div id="title"><strong><%= "Here are the robots you can rent or buy today" %></strong></div>
+  <div class="container d-flex py-1">
+  <p class= "btn small-btn"><%= link_to "Home", root_path, class: "link-color" %></p>
+  <p class= "btn small-btn"><%= link_to "New robot", new_robot_path, class: "link-color" %></p>
+    <div id="title"><strong><%= "Here are the robots you can rent or buy today" %></strong>
+    </div>
+  </div>
 </div>
-</div>
-<ol>
+<ol class= "cards">
   <% @robots.each do |robot| %>
-  <li class= "btn"><%= link_to "#{robot.name}, #{robot.price}", robot, class: "link-color" %></li>
+  <li class= "btn"><%= link_to "#{robot.name}", robot, class: "link-color" %><br><%= "#{robot.price.round}€" %></li>
   <% end %>
 </ol>
 <div>
