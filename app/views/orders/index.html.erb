@@ -11,7 +11,7 @@
   <ol>
     <p>
   <% @orders.each_with_index do |order, index| %>
-      <li class= "btn"><%= link_to "Order n°#{index + 1} - Robot #{order.robot.name}", robot_path(order.robot), class: "link-color" %></li>
+      <li class= "btn"><%= link_to "Order n°#{index + 1} - Robot #{order.robot.name}", order_path(order), class: "link-color" %></li>
     </p>
   <% end %>
   </ol>
