@@ -7,9 +7,9 @@
 </div>
 <ol>
   <% @robots.each do |robot| %>
-  <li class= "btn"><%= link_to "#{robot.name}, #{robot.price}", robot, class: "link-color" %></li>
+    <div class="row"><%= image_tag robot.photo if robot.photo.attached? %><li class= "btn"><%= link_to "#{robot.name}, #{robot.price}", robot, class: "link-color" %></li>
   <% end %>
-</ol>
+</div></ol>
 <div>
 <%# <%= "Choose a category:" %>
 <%# <%= simple_form_for(robot) do |f| %>

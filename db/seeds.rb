@@ -27,6 +27,9 @@ burgerbot = Robot.new(name: "Burgerbot", category: "cooking", description: "Mout
 burgerbot.user = richard
 pastabot = Robot.new(name: "Pastabot", category: "cooking", description: "This robot will cook delicious pasta, as if you were sitting in a traditional restaurant in a small italian village. Pick the right wine and enjoy the ride!", price: 313)
 pastabot.user = richard
+pasta_bot_photo = URI.open("https://www.philips.com/c-dam/b2c/category-pages/Household/kitchen-appliances/pasta-maker/EU7/philips-pastmaker-EU7-thumbnail.jpg")
+pastabot.photo.attach(io: pasta_bot_photo, filename: "pastabot.png", content_type: "image/png")
+
 pizzabot = Robot.new(name: "Pizzabot", category: "cooking", description: "Probaly the most efficient of his generation. Up to 5 pizzas prepared and cooked per minute", price: 154)
 pizzabot.user = richard
 donutbot = Robot.new(name: "Donutbot", category: "cooking", description: "It will prepare for you doughnuts with a perfect geometrical form!!", price: 216)
