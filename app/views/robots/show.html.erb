@@ -15,7 +15,7 @@
       <%= "Robot category: #{@robot.category}" %><br>
       <%= "Robot description: #{@robot.description}" %><br>
       <%= "Robot price: #{@robot.price}" %><br>
-      <%= image_tag @robot.photo %>
+      <%= image_tag @robot.photo if @robot.photo.attached? %>
     </div>
   </div>
 </div>
