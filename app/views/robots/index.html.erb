@@ -5,6 +5,7 @@
     <div id="title"><strong><%= "Here are the robots you can rent or buy today" %></strong></div>
   </div>
 </div>
+
 <div class="row">
   <div class="col-2 mt-3">
     <ol>
@@ -18,14 +19,7 @@
         <% end %>
     </ol>
   </div>
-  <%# <div class="col-2">
-    <ol>
-      <% @robots.each do |robot| %>
-        <%# <div><li class= "btn"><%= link_to "#{robot.name}, #{robot.price}", robot, class: "link-color"</li> %>
-        <%# <% end %>
-        <%# </div> %>
-    <%# </ol> %>
-      <%# </div> %>
+
   <div class="col-10">
     <div class="flex-container">
       <% @robots.each do |robot| %>
@@ -35,9 +29,11 @@
         </div>
       <% end %>
     </div>
-  <%# <%= "Choose a category:" %>
-  <%# <%= simple_form_for(robot) do |f| %>
-    <%# <%= f.input :category %>
-  <%# <% end %>
   </div>
 </div>
+
+
+<div style="width: 100%; height: 600px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
