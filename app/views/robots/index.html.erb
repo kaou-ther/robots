@@ -6,14 +6,26 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-2">
+  <div class="col-2 mt-3">
+    <ol>
+      <% draft_categories = [] %>
+      <% @robots.each do |robot| %>
+        <% draft_categories << robot.category %>
+      <% end %>
+      <% categories = draft_categories.uniq %>
+      <% categories.each do |category| %>
+        <li class= "btn small-btn"><%= category.capitalize %></li>
+        <% end %>
+    </ol>
+  </div>
+  <%# <div class="col-2">
     <ol>
       <% @robots.each do |robot| %>
-        <div><li class= "btn"><%= link_to "#{robot.name}, #{robot.price}", robot, class: "link-color" %></li>
-        <% end %>
-        </div>
-    </ol>
-      </div>
+        <%# <div><li class= "btn"><%= link_to "#{robot.name}, #{robot.price}", robot, class: "link-color"</li> %>
+        <%# <% end %>
+        <%# </div> %>
+    <%# </ol> %>
+      <%# </div> %>
   <div class="col-10">
     <div class="flex-container">
       <% @robots.each do |robot| %>
