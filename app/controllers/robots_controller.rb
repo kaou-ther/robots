@@ -2,7 +2,11 @@ class RobotsController < ApplicationController
   before_action :set_robot, only: [:show, :edit, :update, :destroy]
 
   def index
-    @robots = Robot.all
+    if params[:query].present?
+      @robots = Robot.global_search(params[:query])
+    else
+      @robots = Robot.all
+    end
   end
 
   def new
