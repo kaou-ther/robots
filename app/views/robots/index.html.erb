@@ -30,6 +30,7 @@
     <div class="flex-container">
       <% @robots.each do |robot| %>
         <div class="card">
+          <%= link_to "#{robot.name} #{robot.price.round}€", robot, class: "link-color" %><br>
           <%= image_tag robot.photo if robot.photo.attached? %>
         </div>
       <% end %>
