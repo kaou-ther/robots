@@ -1,0 +1,50 @@
+.button {
+  background-color: #BAF268;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.btn {
+  // background: lightcoral;
+  background-color: #BAF268;
+  font-style: black;
+  border-radius: 15px;
+  width: 300px;
+  height: 40px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.btn:hover {
+  background-color: lightyellow;
+  color: black;
+}
+.big-btn {
+  width: 300px;
+  height: 40px;
+}
+.small-btn {
+  width: 150px;
+  height: 40px;
+  margin-right: 20px;
+  margin-left: 0px;
+  a:link {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+  }
+}
+#btn-robot{
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.link-color {
+  color: #000;
+}
+ol li.btn {
+  display: block; /* Make each <li> element a block-level element */
+  margin-bottom: 10px; /* Optional: add some space between items */
+}

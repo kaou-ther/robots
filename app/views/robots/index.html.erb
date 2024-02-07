@@ -18,26 +18,15 @@
         <% end %>
     </ol>
   </div>
-  <%# <div class="col-2">
-    <ol>
-      <% @robots.each do |robot| %>
-        <%# <div><li class= "btn"><%= link_to "#{robot.name}, #{robot.price}", robot, class: "link-color"</li> %>
-        <%# <% end %>
-        <%# </div> %>
-    <%# </ol> %>
-      <%# </div> %>
   <div class="col-10">
-    <div class="flex-container">
+    <div class="cards">
       <% @robots.each do |robot| %>
         <div class="card">
-          <%= link_to "#{robot.name} #{robot.price.round}€", robot, class: "link-color" %><br>
-          <%= image_tag robot.photo if robot.photo.attached? %>
+          <div class="card-title"><%= link_to "#{robot.name}", robot %></div>
+          <div class="card-photo"><%= image_tag robot.photo if robot.photo.attached? %></div>
+          <div class="card-text"><%= "#{robot.price.round}€" %></div>
         </div>
       <% end %>
     </div>
-  <%# <%= "Choose a category:" %>
-  <%# <%= simple_form_for(robot) do |f| %>
-    <%# <%= f.input :category %>
-  <%# <% end %>
   </div>
 </div>
