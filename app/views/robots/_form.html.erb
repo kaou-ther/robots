@@ -1,12 +1,12 @@
 <div class="container">
-  <div class="row">
+  <div class="row justify-content-center">
     <div class="col-md-8">
     <%= simple_form_for @robot do |f| %>
-      <%= f.input :name %>
-      <%= f.input :category %>
-      <%= f.input :description %>
-      <%= f.input :price %>
-      <%= f.submit %>
+      <%= f.input :name, label: "Robot name" %>
+      <%= f.input :category, label: "Category" %>
+      <%= f.input :description, label: "Description" %>
+      <%= f.input :price, label: "Price" %>
+      <%= f.button :submit, "Update robot", class: "small-btn-cta" %>
     <% end %>
     </div>
   </div>

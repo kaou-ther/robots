@@ -5,14 +5,16 @@
   </div>
 </div>
 
-<%= "Your order is cooking" %>
+<p class = "title"><%= "Your orders' list" %></p>
 
 <div id="orders">
-  <ol>
-    <p>
+  <ol class= "btn-list">
   <% @orders.each_with_index do |order, index| %>
-      <li class= "btn"><%= link_to "Order n°#{index + 1} - Robot #{order.robot.name}", order_path(order), class: "link-color" %></li>
-    </p>
+      <div id="btn-navigation">
+      <div>
+      <li class= "btn" id= "btn-spacing"><%= link_to "Order n°#{index + 1} - Robot #{order.robot.name}", order_path(order), class: "link-color" %></li>
+      </div>
+      </div>
   <% end %>
   </ol>
 </div>
