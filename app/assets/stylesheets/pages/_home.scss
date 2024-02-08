@@ -53,3 +53,14 @@ ol li.btn {
 #big-size {
   font-size: 30px;
 }
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap:16px;
+}
+#card-type {
+  background-color: white;
+}
+.d-none {
+  display: none;
+}
