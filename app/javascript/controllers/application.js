@@ -1,4 +1,5 @@
 import { Application } from "@hotwired/stimulus"
+import mapboxgl from 'mapbox-gl'
 
 const application = Application.start()
 

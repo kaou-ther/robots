@@ -1,14 +1,6 @@
 import { Controller } from "@hotwired/stimulus"
 import mapboxgl from 'mapbox-gl' // Don't forget this!
 
-mapboxgl.accessToken = 'pk.eyJ1Ijoia2FvdS10aGVyIiwiYSI6ImNscHh3M2xucjB1cDcyam51dDNvYnAyeXYifQ.QRLlskPty-JZ3l1LTD-gOA';
-const map = new mapboxgl.Map({
-	container: 'map', // container ID
-	style: 'mapbox://styles/mapbox/streets-v12', // style URL
-	center: [-74.5, 40], // starting position [lng, lat]
-	zoom: 9, // starting zoom
-});
-
 export default class extends Controller {
   static values = {
     apiKey: String,
