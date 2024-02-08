@@ -60,3 +60,14 @@ ol li.btn {
   display: block; /* Make each <li> element a block-level element */
   margin-bottom: 10px; /* Optional: add some space between items */
 }
+.btn-list {
+  text-align: center;
+}
+#btn-navigation div {
+  display: inline-block;
+  text-align: center;
+}
+#btn-spacing {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
