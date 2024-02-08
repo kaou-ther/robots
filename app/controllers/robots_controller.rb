@@ -7,6 +7,12 @@ class RobotsController < ApplicationController
     else
       @robots = Robot.all
     end
+    @markers = @robots.geocoded.map do |robot|
+      {
+        lat: robot.latitude,
+        lng: robot.longitude
+      }
+    end
   end
 
   def new
