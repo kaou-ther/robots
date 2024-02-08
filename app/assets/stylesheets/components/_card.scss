@@ -1,10 +1,13 @@
 .card {
-  width: 300px;
-  height: 150px;
+  width: 370px;
+  height: 300px;
   margin: auto;
   margin-top: 15px;
   margin-bottom: 15px;
-  text-align: left;
+  text-align: center;
   display: flex;
-  box-shadow: 5px 5px 5px 5px grey;
+  justify-content: center;
+  align-items: center;
+  background-color: #3A3A3A;
+  border-radius: 3% 10% 3% 3%;
 }

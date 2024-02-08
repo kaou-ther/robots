@@ -1,11 +1,11 @@
-<div class="border-bottom border-black bg-white">
+<div class="border-bottom border-black bg-black">
   <div class="container d-flex py-1">
     <p class= "btn small-btn"><%= link_to "Home", root_path, class: "link-color" %></p>
     <p class= "btn small-btn"><%= link_to "New robot", new_robot_path, class: "link-color" %></p>
     <div id="title"><strong><%= "Here are the robots you can rent or buy today" %></strong></div>
   </div>
 </div>
-<div class="row" data-controller="category">
+<div class="row bg-black" data-controller="category">
   <div class="col-2 mt-3">
     <ol>
       <% draft_categories = [] %>
@@ -18,26 +18,15 @@
         <% end %>
     </ol>
   </div>
-  <%# <div class="col-2">
-    <ol>
-      <% @robots.each do |robot| %>
-        <%# <div><li class= "btn"><%= link_to "#{robot.name}, #{robot.price}", robot, class: "link-color"</li> %>
-        <%# <% end %>
-        <%# </div> %>
-    <%# </ol> %>
-      <%# </div> %>
   <div class="col-10">
-    <div class="flex-container">
+    <div class="cards">
       <% @robots.each do |robot| %>
         <div class="card" data-category-target="item" data-category="<%= robot.category %>">
-          <%= link_to "#{robot.name} #{robot.price.round}€", robot, class: "link-color" %><br>
-          <%= image_tag robot.photo if robot.photo.attached? %>
+          <div class="card-title"><%= link_to "#{robot.name}", robot %></div>
+          <div class="card-photo"><%= image_tag robot.photo if robot.photo.attached? %></div>
+          <div class="card-text"><%= "#{robot.price.round}€" %></div>
         </div>
       <% end %>
     </div>
-  <%# <%= "Choose a category:" %>
-  <%# <%= simple_form_for(robot) do |f| %>
-    <%# <%= f.input :category %>
-  <%# <% end %>
   </div>
 </div>
