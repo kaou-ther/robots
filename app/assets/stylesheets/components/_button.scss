@@ -19,7 +19,10 @@
 }
 .btn:hover {
   background-color: lightyellow;
-  color: black;
+  a {
+    color: $dark-gray;
+  }
+  color: $black;
 }
 .big-btn {
   width: 300px;
