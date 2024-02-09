@@ -1,24 +1,40 @@
-<div class="border-bottom border-black bg-white">
-  <div class="container d-flex py-1">
+<div class="container d-flex py-1">
     <p class= "btn small-btn"><%= link_to "Home", root_path, class: "link-color" %></p>
-    <p class= "btn big-btn"><%= link_to "Back to robots list", robots_path, class: "link-color" %></p>
+    <p class= "btn small-btn"><%= link_to "Back to list", robots_path, class: "link-color" %></p>
   </div>
 </div>
-<br>
-
-<div class="container">
+<div class="container bg-black">
   <div class="row">
-    <div class="col-md-15">
-      <div class= "see">
-      <%= "Very nice choice!" %>
-      <%= "Robot name: #{@robot.name}" %><br>
-      <%= "Robot category: #{@robot.category}" %><br>
-      <%= "Robot description: #{@robot.description}" %><br>
-      <%= "Robot price: #{@robot.price}" %><br>
-      <%= image_tag @robot.photo if @robot.photo.attached? %>
+    <div class="col-6">
+      <div class="card-text-show">
+        <%= "Very nice choice! You'll have a lot of fun with #{@robot.name}!!" %><br>
+        <%= "#{@robot.description}" %><br>
+        <%= "Such a jewel of technology for only #{@robot.price.round}€" %><br>
+      </div>
+        <div class="card-show">
+          <div class="card-photo-show"><%= image_tag @robot.photo if @robot.photo.attached? %></div>
+        </div>
+    </div>
+    <div class="col-6">
+      <div class="card-text-show">
+        <%= "Locate your robot!" %><br>
+        <%= "This map is updated in real time" %><br>
+        <%= "#{@robot.name} can't wait to come and serve you!!" %><br>
+        <%= "Have fun!!" %><br>
+      </div>
+        <div class="mt-60">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>Insert map</p>
+        </div>
     </div>
   </div>
 </div>
-<p class= "btn small-btn"><%= link_to "Order this robot", new_robot_order_path(@robot), class: "link-color" %></p>
-<p class= "btn small-btn"><%= link_to "Edit robot", edit_robot_path(@robot), class: "link-color" %></p>
-<p class= "btn small-btn"><%= link_to "Delete", robot_path(@robot), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "link-color" %></p>
+<div class="container d-flex py-1">
+  <p class= "btn small-btn"><%= link_to "Order", new_robot_order_path(@robot), class: "link-color" %></p>
+  <p class= "btn small-btn"><%= link_to "Edit", edit_robot_path(@robot), class: "link-color" %></p>
+  <p class= "btn small-btn"><%= link_to "Delete", robot_path(@robot), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "link-color" %></p>
+</div>
