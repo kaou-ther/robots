@@ -1,0 +1,33 @@
+.category-filter {
+  background-color: $dark-gray;
+  border: 1px solid $light-gray;
+  color: $light-gray;
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    color: $green;
+    border-color: $green;
+
+    a {
+      color: $green;
+    }
+  }
+
+  a {
+    color: $light-gray;
+    // Don't do this it's wrong. Instead wrap the div with the a tag.
+    padding: 2rem;
+  }
+  &.selected {
+    background-color: $medium-gray;
+  }
+}
+
+.category-filters {
+  border-right: 1px solid $green;
+  padding-right: 1rem;
+}

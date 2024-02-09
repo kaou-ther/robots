@@ -1,0 +1,26 @@
+.searchbar {
+  display: flex;
+
+  * {
+    margin: 0;
+  }
+
+  #query {
+    flex-grow: 1;
+    margin-right: -30px;
+    border-radius: 15px;
+    border: 1px solid $green;
+    background: $dark-gray;
+    padding-left: 1rem;
+    color: $light-gray;
+  }
+
+  input[type="submit"] {
+    width: initial;
+    padding: 0px 30px;
+
+    &:hover {
+      background-color: $green;
+    }
+  }
+}

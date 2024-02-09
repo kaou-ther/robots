@@ -1,26 +1,26 @@
-<div class="border-bottom border-black bg-white">
-  <div class="container d-flex py-1">
-  <p class= "btn small-btn"><%= link_to "Back to the list", orders_path, class: "link-color" %></p>
-  <p class= "btn small-btn"><%= link_to "Home", root_path, class: "link-color" %></p>
-  </div>
-</div>
 
-<p class= "title"><strong><%= "Here is your order" %></strong><br></p>
+
 
 <div class="container">
   <div class="row">
-    <div class="col-md-15">
-      <div class= "see">
-      <%= "start date: #{@order.start_date}" %><br>
-      <%= "end date: #{@order.end_date}" %><br>
-      <%= "status: #{@order.status}" %><br>
-      <%= "robot name: #{@order.robot.name}" %>
-      <%= "robot description: #{@order.robot.description}" %>
+    <div class="col-4">
+      <%= link_to "◀︎ Back to robots", robots_path %>
+    </div>
+    <div class="col-4">
+      <h1>Here is your order for <%= @order.robot.name %></h1>
+
+      <ul class= "attributes">
+        <li><span class="robot-attribute">From: </span><%= @order.start_date %></li>
+        <li><span class="robot-attribute">To: </span><%= @order.end_date %></li>
+        <li><span class="robot-attribute">Status: </span><%= @order.status %></li>
+        <li><span class="robot-attribute">Description: </span><%= @order.robot.description %></li>
+      </ul>
+      <div class="mt-4">
+        <%= link_to "Edit", edit_order_path(@order), class: "link-color btn" %>
+        <%= link_to "Delete", order_path(@order),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "link-color btn btn-outline"%>
       </div>
     </div>
+    <div class="col-4"></div>
   </div>
 </div>
-
-<p class= "btn small-btn"><%= link_to "Edit", edit_order_path(@order), class: "link-color" %></p>
-<p class= "btn small-btn"><%= link_to "Delete", order_path(@order),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "link-color"%></p>

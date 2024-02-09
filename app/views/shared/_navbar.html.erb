@@ -1,0 +1,25 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon <%= "darkmode" unless controller.controller_name == "pages"%>">
+  <div class="container-fluid">
+    <%= link_to "R O B O T S", root_path, class: "navbar-brand" %>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <% if user_signed_in? %>
+          <li class="nav-item active">
+            <%= link_to "View robots", robots_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to "My orders", orders_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to "Log out", destroy_user_session_path, class: "nav-link", data: {turbo_method: :delete} %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

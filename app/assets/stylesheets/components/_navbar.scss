@@ -1,6 +1,22 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+.navbar-lewagon.darkmode {
+  color: $light-gray;
+
+  a,
+  a.nav-link {
+    color: $light-gray;
+  }
+
+  a.nav-link:hover,
+  a:hover {
+    color: $green;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +25,8 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+a.dropdown-item {
+  color: $light-gray;
 }
