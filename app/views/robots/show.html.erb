@@ -17,8 +17,10 @@
         <div class="card-photo-show"><%= image_tag @robot.photo if @robot.photo.attached? %></div>
         <div class="container d-flex justify-content-center mt-4 py-1">
           <%= link_to "Order", new_robot_order_path(@robot), class: "btn small-btn" %>
+          <% if current_user == @robot.user %>
           <%= link_to "Edit", edit_robot_path(@robot), class: "btn small-btn" %>
           <%= link_to "Delete", robot_path(@robot), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn small-btn btn-outline" %>
+          <% end %>
         </div>
       </div>
     </div>
