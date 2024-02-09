@@ -12,6 +12,7 @@
 <div class="row bg-black" data-controller="category">
   <div class="col-2 mt-3">
     <ol class="category-filters gap-2 d-flex flex-column">
+      <li class= "btn small-btn" data-action="click->category#showall"><%= "All" %></li>
       <% draft_categories = [] %>
       <% @robots.each do |robot| %>
         <% draft_categories << robot.category.downcase %>
