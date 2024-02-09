@@ -19,12 +19,13 @@ showitems(event) {
   this.itemTargets.forEach((element) => {
     element.classList.toggle('d-none', element.dataset.category !== clickedCategory);
   });
-  showall(event) {
+}
+showall(event) {
   this.itemTargets.forEach((element) => {
     element.classList.remove('d-none');
   });
-  }
 }
+
 }
 
 
