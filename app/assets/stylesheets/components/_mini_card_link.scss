@@ -1,0 +1,23 @@
+.mini-card-link {
+  background-color: $dark-gray;
+  border: 1px solid $light-gray;
+  color: $light-gray;
+  height: 6rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    color: $green;
+    border-color: $green;
+
+    a {
+      color: $green;
+    }
+  }
+
+  a {
+    color: $light-gray;
+  }
+}

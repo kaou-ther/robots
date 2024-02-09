@@ -11,6 +11,11 @@
 @import "components/index";
 @import "pages/index";
 
+a {
+  color: $green;
+  text-decoration: none;
+}
+
 a:visited {
   text-decoration: none;
 }
