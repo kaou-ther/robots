@@ -1,46 +1,45 @@
 <div class="background">
   <div class="black-fade"></div>
   <div class="black">
-    <div class="div-title pb-4">
-    <h1 class="welcome-title">Welcome to the robot marketplace!</h1>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-3"></div>
-        <div class="col-6">
-          <div class="row mb-4">
-            <div class="col-12">
-              <% if user_signed_in? %>
-                <div class="d-flex mb-2 w-100 gap-3">
-                  <div class="mini-card-link"><%= link_to "Robots today", robots_path, class: "" %></div>
-                  <div class="mini-card-link"><%= link_to "My orders", orders_path, class: "" %></div>
-                </div>
-              <% else %>
-                <div>
-                  <%= link_to "Sign up", new_user_registration_path, class: "link-color btn small-btn" %>
-                  <%= link_to "Sign in", new_user_session_path, class: "link-color btn small-btn btn-outline" %>
-                </div>
-              <% end %>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <%= form_with url: robots_path, method: :get, class: "searchbar" do %>
-                <%= text_field_tag :query,
-                      params[:query],
-                      placeholder: "Type a keyword",
-                      style: "width: 250px"
-                  %>
-                <%= submit_tag "Search", name: "", class: "btn btn-outline" %>
-              <% end %>
-            </div>
-          </div>
-        </div>
-        <div class="col-3"></div>
-      </div>
-    </div>
+  </div>
+</div>
+<div class="container fade-overlay">
+  <div class="div-title pb-4">
+  <h1 class="welcome-title">Welcome to the robot marketplace!</h1>
   </div>
   <div class="container">
-
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6">
+        <div class="row mb-4">
+          <div class="col-12">
+            <% if user_signed_in? %>
+              <div class="d-flex mb-2 w-100 gap-3">
+                <div class="mini-card-link"><%= link_to "Robots today", robots_path, class: "" %></div>
+                <div class="mini-card-link"><%= link_to "My orders", orders_path, class: "" %></div>
+              </div>
+            <% else %>
+              <div>
+                <%= link_to "Sign up", new_user_registration_path, class: "link-color btn small-btn" %>
+                <%= link_to "Sign in", new_user_session_path, class: "link-color btn small-btn btn-outline" %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <%= form_with url: robots_path, method: :get, class: "searchbar" do %>
+              <%= text_field_tag :query,
+                    params[:query],
+                    placeholder: "Type a keyword",
+                    style: "width: 250px"
+                %>
+              <%= submit_tag "Search", name: "", class: "btn btn-outline" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="col-3"></div>
+    </div>
   </div>
 </div>
