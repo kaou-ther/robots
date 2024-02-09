@@ -2,7 +2,7 @@
   <div class="black-fade"></div>
   <div class="black">
     <div class="div-title pb-4">
-    <h1 class="welcome-title"><strong>Welcome to the robot marketplace!</strong></h1>
+    <h1 class="welcome-title">Welcome to the robot marketplace!</h1>
     </div>
     <div class="container">
       <div class="row align-items-end">
@@ -14,24 +14,26 @@
           </div>
         </div>
       <% end %>
-        <div class="col-6 mb-20">
+      <div class="col-3"></div>
+      <div class="col-6 mb-20">
         <% if !user_signed_in? %>
           <div>
-            <p class= "btn small-btn"><%= link_to "Sign up", new_user_registration_path, class: "link-color" %></p>
-            <p class= "btn small-btn"><%= link_to "Sign in", new_user_session_path, class: "link-color" %></p>
+            <%= link_to "Sign up", new_user_registration_path, class: "link-color btn small-btn" %>
+            <%= link_to "Sign in", new_user_session_path, class: "link-color btn small-btn btn-outline" %>
           </div>
         <% end %>
-            <%= form_with url: robots_path, method: :get, class: "d-flex align-items-start" do %>
+            <%= form_with url: robots_path, method: :get, class: "d-flex align-items-start justify-content-center" do %>
               <%= text_field_tag :query,
                     params[:query],
                     class: "form-control me-2",
                     placeholder: "Type a keyword",
                     style: "width: 250px"
                 %>
-              <%= submit_tag "Search", name: "", class: "btn small-btn" %>
+              <%= submit_tag "Search", name: "", class: "btn small-btn btn-outline" %>
             <% end %>
         </div>
       </div>
+      <div class="col-3"></div>
     </div>
   </div>
 </div>
