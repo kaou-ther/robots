@@ -20,8 +20,11 @@ class RobotsController < ApplicationController
   end
 
   def create
-    @robot = Robot.new(robot_params)
+    @robot = Robot.new(robot_params.except(:photo))
     @robot.user = current_user
+    if params[:robot][:photo].present?
+      @robot.photo.attach(params[:robot][:photo])
+    end
     if @robot.save
       redirect_to robot_path(@robot)
     else
@@ -52,7 +55,7 @@ class RobotsController < ApplicationController
   private
 
   def robot_params
-    params.require(:robot).permit(:name, :description, :category, :price)
+    params.require(:robot).permit(:name, :description, :category, :price, :photo)
   end
 
   def set_robot
