@@ -2,6 +2,21 @@
   justify-content: space-between;
   position: absolute;
   width: 100%;
+  top: 0;
+  z-index: 10;
+}
+.navbar-lewagon.darkmode {
+  color: $light-gray;
+
+  a,
+  a.nav-link {
+    color: $light-gray;
+  }
+
+  a.nav-link:hover,
+  a:hover {
+    color: $green;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {

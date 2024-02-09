@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon <%= "darkmode" unless controller.controller_name == "pages"%>">
   <div class="container-fluid">
     <%= link_to "R O B O T S", root_path, class: "navbar-brand" %>
 
@@ -10,14 +10,10 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link" %>
+            <%= link_to "My orders", orders_path, class: "nav-link" %>
           </li>
-          <li class="nav-item dropdown">
-            <%= image_tag "https://www.svgrepo.com/show/509382/menu.svg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "My orders", orders_path, class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
-            </div>
+          <li class="nav-item active">
+            <%= link_to "Log out", destroy_user_session_path, class: "nav-link", data: {turbo_method: :delete} %>
           </li>
         <% end %>
       </ul>
