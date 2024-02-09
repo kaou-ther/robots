@@ -22,6 +22,9 @@
     // Don't do this it's wrong. Instead wrap the div with the a tag.
     padding: 2rem;
   }
+  &.selected {
+    background-color: $medium-gray;
+  }
 }
 
 .category-filters {
