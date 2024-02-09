@@ -21,6 +21,9 @@
   <body class="bg-black">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <%= render "shared/navbar" %>
+    <div class="main-container">
+      <%= yield %>
+    </div>
   </body>
 </html>

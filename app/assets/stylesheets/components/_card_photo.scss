@@ -7,11 +7,12 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 5px 20px 5px 20px;
   }
 }
 .card-photo-show {
   width: 550px;
-  height: 400px;
+  height: 300px;
   display: flex;
   justify-content: center;
   img {

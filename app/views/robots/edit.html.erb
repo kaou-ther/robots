@@ -1,8 +1,13 @@
-<div class="border-bottom border-black bg-white">
-  <div class="container d-flex py-1">
-    <p class= "btn small-btn"><%= link_to "Home", root_path, class: "link-color" %></p>
-    <p class= "btn small-btn"><%= link_to "Back to list", robots_path, class: "link-color" %></p>
-    <p class= "btn small-btn"><%= link_to "Robot detail", robot_path, class: "link-color" %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-2">
+      <%= link_to "◀︎ Back to robot details", robot_path(@robot) %>
+    </div>
+    <div class="col-8">
+      <h1>Edit <%= @robot.name %></h1>
+
+      <%= render "form", robot: @robot %>
+    </div>
+    <div class="col-2"></div>
   </div>
 </div>
-<%= render "form", robot: @robot %>

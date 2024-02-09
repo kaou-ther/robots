@@ -1,7 +1,7 @@
 .button {
-  background-color: #BAF268;
+  background-color: $green;
   border: none;
-  color: white;
+  color: $black;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -9,18 +9,20 @@
   font-size: 16px;
 }
 .btn {
-  // background: lightcoral;
-  background-color: #BAF268;
-  font-style: black;
+  background-color: $green;
+  color: $black;
   border-radius: 15px;
-  width: 300px;
+  min-width: 100px;
   height: 40px;
   margin-bottom: 50px;
   text-align: center;
 }
 .btn:hover {
   background-color: lightyellow;
-  color: black;
+  a {
+    color: $dark-gray;
+  }
+  color: $black;
 }
 .big-btn {
   width: 300px;
@@ -54,8 +56,7 @@
 .small-btn-cta {
   width: 150px;
   height: 40px;
-  margin-right: 20px;
-  margin-left: 0px;
+  margin: 0;
   border: 2px solid black;
   a:link {
     color: black;
@@ -63,7 +64,7 @@
     font-size: 18px;
   }
 }
-#btn-robot{
+#btn-robot {
   margin-top: 100px;
   margin-bottom: 50px;
 }
@@ -84,4 +85,18 @@ ol li.btn {
 #btn-spacing {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+input[type="submit"] {
+  color: $black;
+}
+
+.btn-outline {
+  border: solid 1px $green;
+  background-color: $dark-gray;
+  color: $green;
+}
+
+input.btn-outline {
+  color: $green;
 }

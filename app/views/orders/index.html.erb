@@ -1,20 +1,19 @@
-<div class="border-bottom border-black bg-white">
-  <div class="container d-flex py-1">
-  <p class= "btn small-btn"><%= link_to "Home", root_path, class: "link-color" %></p>
-  <button type="button" class="btn btn-outline-primary"><%= link_to "Place a new order", robots_path, class: "link-color"  %></button>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1>Your orders</h1>
+
+      <div id="orders">
+        <ol class= "btn-list">
+        <% @orders.each_with_index do |order, index| %>
+            <div id="btn-navigation">
+            <div>
+            <li class= "btn" id= "btn-spacing"><%= link_to "Order n°#{index + 1} - Robot #{order.robot.name}", order_path(order), class: "link-color" %></li>
+            </div>
+            </div>
+        <% end %>
+        </ol>
+      </div>
+    </div>
   </div>
-</div>
-
-<p class = "title"><%= "Your orders' list" %></p>
-
-<div id="orders">
-  <ol class= "btn-list">
-  <% @orders.each_with_index do |order, index| %>
-      <div id="btn-navigation">
-      <div>
-      <li class= "btn" id= "btn-spacing"><%= link_to "Order n°#{index + 1} - Robot #{order.robot.name}", order_path(order), class: "link-color" %></li>
-      </div>
-      </div>
-  <% end %>
-  </ol>
 </div>

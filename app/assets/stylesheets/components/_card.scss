@@ -8,19 +8,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #3A3A3A;
+  background-color: #3a3a3a;
   border-radius: 3% 10% 3% 3%;
+  border: 1px solid $medium-gray;
 }
 .card-show {
   width: 637px;
-  height: 500px;
   margin: auto;
   margin-top: 15px;
   margin-bottom: 15px;
   text-align: center;
-  display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #3A3A3A;
+  background-color: #3a3a3a;
   border-radius: 3% 3% 3% 3%;
 }

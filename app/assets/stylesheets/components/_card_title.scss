@@ -3,16 +3,14 @@
   text-align: left;
   vertical-align: bottom;
   justify-content: left;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: $headers-font;
   font-size: 32px;
   color: white;
-  a:link {
-    color: white;
-    text-decoration: none;
-    font-size: 32px;
-  }
-  a:hover {
-    color: gray;
+}
+
+.card:hover {
+  .card-title {
+    color: $green;
   }
   a:visited {
     color: inherit;

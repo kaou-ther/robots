@@ -1,10 +1,13 @@
 .empty-space {
-height: 510px;
+  height: 510px;
 }
 .black-fade {
-height: 510px;
-background-color: black;
-background: linear-gradient(to bottom, transparent 0%, black);
+  height: 510px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: black;
+  background: linear-gradient(to bottom, transparent 0%, black);
 }
 .div-title {
   justify-content: center;
@@ -12,7 +15,14 @@ background: linear-gradient(to bottom, transparent 0%, black);
 }
 .black {
   height: 325px;
+  width: 100%;
+  position: fixed;
+  top: 510px;
   background-color: black;
+}
+
+.fade-overlay {
+  margin-top: 400px;
 }
 .form {
   width: 300px;

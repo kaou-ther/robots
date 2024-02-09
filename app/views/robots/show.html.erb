@@ -1,40 +1,30 @@
-<div class="container d-flex py-1">
-    <p class= "btn small-btn"><%= link_to "Home", root_path, class: "link-color" %></p>
-    <p class= "btn small-btn"><%= link_to "Back to list", robots_path, class: "link-color" %></p>
-  </div>
-</div>
-<div class="container bg-black">
+
+
+<div class="container">
   <div class="row">
-    <div class="col-6">
-      <div class="card-text-show">
-        <%= "Very nice choice! You'll have a lot of fun with #{@robot.name}!!" %><br>
-        <%= "#{@robot.description}" %><br>
-        <%= "Such a jewel of technology for only #{@robot.price.round}€" %><br>
-      </div>
-        <div class="card-show">
-          <div class="card-photo-show"><%= image_tag @robot.photo if @robot.photo.attached? %></div>
-        </div>
-    </div>
-    <div class="col-6">
-      <div class="card-text-show">
-        <%= "Locate your robot!" %><br>
-        <%= "This map is updated in real time" %><br>
-        <%= "#{@robot.name} can't wait to come and serve you!!" %><br>
-        <%= "Have fun!!" %><br>
-      </div>
-        <div class="mt-60">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <p>Insert map</p>
-        </div>
+    <div class="col-12 d-flex align-content-start">
+      <%= link_to "◀︎ Back to robots", robots_path %>
     </div>
   </div>
-</div>
-<div class="container d-flex py-1">
-  <p class= "btn small-btn"><%= link_to "Order", new_robot_order_path(@robot), class: "link-color" %></p>
-  <p class= "btn small-btn"><%= link_to "Edit", edit_robot_path(@robot), class: "link-color" %></p>
-  <p class= "btn small-btn"><%= link_to "Delete", robot_path(@robot), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "link-color" %></p>
+  <div class="row mt-4">
+    <div class="col-6">
+      <div class="card-show d-flex flex-column">
+        <h1><%= @robot.name %></h1>
+        <p>Very nice choice!</p>
+        <p>You'll have a lot of fun with <%= @robot.name %>!!</p>
+        <p><%= @robot.description %></p>
+        <p>Such a jewel of technology for only <%= @robot.price.round %>€</p>
+        <div class="card-photo-show"><%= image_tag @robot.photo if @robot.photo.attached? %></div>
+        <div class="container d-flex justify-content-center mt-4 py-1">
+          <%= link_to "Order", new_robot_order_path(@robot), class: "btn small-btn" %>
+          <%= link_to "Edit", edit_robot_path(@robot), class: "btn small-btn" %>
+          <%= link_to "Delete", robot_path(@robot), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn small-btn btn-outline" %>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      Insert map here!
+    </div>
+    <div class="col-2"></div>
+  </div>
 </div>
