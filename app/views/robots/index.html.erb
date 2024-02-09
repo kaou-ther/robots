@@ -1,20 +1,24 @@
-<div class="border-bottom border-black bg-black">
-  <div class="container d-flex py-1">
-    <p class= "btn small-btn"><%= link_to "Home", root_path, class: "link-color" %></p>
-    <p class= "btn small-btn"><%= link_to "New robot", new_robot_path, class: "link-color" %></p>
-    <div id="title"><strong><%= "Here are the robots you can rent or buy today" %></strong></div>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="text-lg-start">Here are the robots you can rent or buy today</h1>
+      <div class="d-flex justify-content-between">
+        <p>You can also list you own robot for other to rent or buy</p>
+        <%= link_to "Add your robot", new_robot_path, class: "link-color btn" %>
+      </div>
+    </div>
   </div>
 </div>
 <div class="row bg-black" data-controller="category">
   <div class="col-2 mt-3">
-    <ol>
+    <ol class="category-filters gap-2 d-flex flex-column">
       <% draft_categories = [] %>
       <% @robots.each do |robot| %>
         <% draft_categories << robot.category %>
       <% end %>
       <% categories = draft_categories.uniq %>
       <% categories.each do |category| %>
-        <li class= "btn small-btn" data-action="click->category#showitems" data-category="<%= category %>"><%= category.capitalize %></li>
+        <li class= "category-filter" data-action="click->category#showitems" data-category="<%= category %>"><%= category.capitalize %></li>
         <% end %>
     </ol>
   </div>
