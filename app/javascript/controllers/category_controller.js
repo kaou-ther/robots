@@ -10,20 +10,22 @@ export default class extends Controller {
 
 showitems(event) {
     const clickedCategory = event.currentTarget.dataset.category;
-    this.itemTargets.forEach((element) => {
-        element.classList.toggle('d-none', element.dataset.category !== clickedCategory);
-    });
-  }
 
+  document.querySelectorAll('.btn-filter').forEach((button) => {
+    button.style.backgroundColor = '';
+  });
+  event.currentTarget.style.backgroundColor = '#D3D3D3';
+
+  this.itemTargets.forEach((element) => {
+    element.classList.toggle('d-none', element.dataset.category !== clickedCategory);
+  });
   showall(event) {
-    this.itemTargets.forEach((element) => {
-      element.classList.remove('d-none');
+  this.itemTargets.forEach((element) => {
+    element.classList.remove('d-none');
   });
   }
 }
-
-
-
+}
 
 
 
