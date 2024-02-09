@@ -1,20 +1,24 @@
 <div class="border-bottom border-black bg-black">
+    <% if user_signed_in? %>
+      <p><%= link_to "Sign out", destroy_user_session_path, data: { turbo_method: :delete }, class: "simple-link" %></p>
+    <% end %>
   <div class="container d-flex py-1">
-    <p class= "btn small-btn"><%= link_to "Home", root_path, class: "link-color" %></p>
-    <p class= "btn small-btn"><%= link_to "New robot", new_robot_path, class: "link-color" %></p>
+    <p class= "btn small-btn-light"><%= link_to "Home", root_path, class: "link-color" %></p>
+    <p class= "btn small-btn-light"><%= link_to "New robot", new_robot_path, class: "link-color" %></p>
     <div id="title"><strong><%= "Here are the robots you can rent or buy today" %></strong></div>
   </div>
 </div>
 <div class="row bg-black" data-controller="category">
   <div class="col-2 mt-3">
     <ol>
+      <li class= "btn small-btn" data-action="click->category#showall"><%= "All" %></li>
       <% draft_categories = [] %>
       <% @robots.each do |robot| %>
         <% draft_categories << robot.category %>
       <% end %>
       <% categories = draft_categories.uniq %>
       <% categories.each do |category| %>
-        <li class= "btn small-btn" data-action="click->category#showitems" data-category="<%= category %>"><%= category.capitalize %></li>
+        <li class= "btn small-btn-light" data-action="click->category#showitems" data-category="<%= category %>"><%= category.capitalize %></li>
         <% end %>
     </ol>
   </div>
