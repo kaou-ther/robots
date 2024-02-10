@@ -10,7 +10,9 @@ class RobotsController < ApplicationController
     @markers = @robots.geocoded.map do |robot|
       {
         lat: robot.latitude,
-        lng: robot.longitude
+        lng: robot.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: {robot: robot}),
+        marker_html: render_to_string(partial: "marker", locals: {robot: robot})
       }
     end
   end
