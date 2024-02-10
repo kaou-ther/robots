@@ -26,9 +26,11 @@ export default class extends Controller {
     document.querySelectorAll(".category-filter").forEach((button) => {
       button.classList.remove("selected");
     });
-    this.itemTargets.forEach((element) => {
-      element.classList.remove("d-none");
-    });
+    // this.itemTargets.forEach((element) => {
+    //   element.classList.remove("d-none");
+    // });
+    Turbo.visit("/robots")
+
   }
 }
 
