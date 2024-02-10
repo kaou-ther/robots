@@ -12,7 +12,7 @@
       <ul class= "attributes">
         <li><span class="robot-attribute">From: </span><%= @order.start_date %></li>
         <li><span class="robot-attribute">To: </span><%= @order.end_date %></li>
-        <li><span class="robot-attribute">Status: </span><%= @order.status %></li>
+        <li><span class="robot-attribute">Status: </span><%= @order.status.present? ? @order.status : "pending" %></li>
         <li><span class="robot-attribute">Description: </span><%= @order.robot.description %></li>
       </ul>
       <div class="mt-4">
