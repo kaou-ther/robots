@@ -39,7 +39,7 @@ donutbot = Robot.new(address: "7 Rue de la République, 13001 Marseille", name: 
 donutbot.user = richard
 donutbot_photo = URI.open("https://m.media-amazon.com/images/I/71DkTSGE59S.jpg")
 donutbot.photo.attach(io: donutbot_photo, filename: "donutbot.png", content_type: "image/png")
-eggbot = Robot.new(address: "42 Rue du Faubourg Saint-Antoine, 31000 Toulouse", name: "Eggbot", category: "cooking", description: "Eggs benedict, omelette, sunny side up, you name it, it does it all.", price: 230)
+eggbot = Robot.new(address: "15 Rue d'Antipoul, 31000 Toulouse", name: "Eggbot", category: "cooking", description: "Eggs benedict, omelette, sunny side up, you name it, it does it all.", price: 230)
 eggbot.user = richard
 eggbot_photo = URI.open("https://cdn.openart.ai/stable_diffusion/c251d0c365c7135c6f28d3240a55ac6b5e02bf8b_2000x2000.webp")
 eggbot.photo.attach(io: eggbot_photo, filename: "eggbot.png", content_type: "image/png")
@@ -55,7 +55,7 @@ dustbot = Robot.new(address: "33 Rue de la République, 67000 Strasbourg", name:
 dustbot.user = paul
 dustbot_photo = URI.open("https://img.kwcdn.com/product/Fancyalgo/VirtualModelMatting/a6c6c76744fe81e5f3e9515254066dd8.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp")
 dustbot.photo.attach(io: dustbot_photo, filename: "dustbot.png", content_type: "image/png")
-dishbot = Robot.new(address: "55 Rue du Faubourg Saint-Honoré, 69000 Lyon", name: "Dishbot", category: "cleaning", description: "So clean, so efficient. You will be surprised by their performance, and this without breaking anything.", price: 346)
+dishbot = Robot.new(address: "10 Rue Cleberg, 69000 Lyon", name: "Dishbot", category: "cleaning", description: "So clean, so efficient. You will be surprised by their performance, and this without breaking anything.", price: 346)
 dishbot.user = paul
 dishbot_photo = URI.open("https://www.trustedreviews.com/wp-content/uploads/sites/54/2022/05/Screenshot-2022-05-25-at-2.11.25-PM.png")
 dishbot.photo.attach(io: dishbot_photo, filename: "dishbot.png", content_type: "image/png")
@@ -67,19 +67,19 @@ treebot = Robot.new(address: "6 Place de la Comédie, 34000 Montpellier", name: 
 treebot.user = joanne
 treebot_photo = URI.open("https://spectrum.ieee.org/media-library/image.jpg?id=25574755&width=980")
 treebot.photo.attach(io: treebot_photo, filename: "treebot.png", content_type: "image/png")
-grassbot = Robot.new(address: "19 Rue des Dominicains, 21000 Dijon", name: "Grassbot", category: "gardening", description: "Mowing the lawn. Pff... A thing of the past! Let the specialist do it for you.", price: 754)
+grassbot = Robot.new(address: "10 Rue du Mullhouse, 21000 Dijon", name: "Grassbot", category: "gardening", description: "Mowing the lawn. Pff... A thing of the past! Let the specialist do it for you.", price: 754)
 grassbot.user = joanne
 grassbot_photo = URI.open("https://earimediaprodweb.azurewebsites.net/Api/v1/Multimedia/908171f9-d298-471a-baa6-b8d8a5a66e6f/Rendition/low-res/Content/Public")
 grassbot.photo.attach(io: grassbot_photo, filename: "grassbot.png", content_type: "image/png")
-flowerbot = Robot.new(address: "71 Rue du Port, 35000 Rennes", name: "Flowerbot", category: "gardening", description: "To take care of flowers you need a very delicate, highly specialized bot like this one.", price: 925)
+flowerbot = Robot.new(address: "15 bd de la liberté, 35000 Rennes", name: "Flowerbot", category: "gardening", description: "To take care of flowers you need a very delicate, highly specialized bot like this one.", price: 925)
 flowerbot.user = joanne
 flowerbot_photo = URI.open("https://images.squarespace-cdn.com/content/v1/5494b8f5e4b0d7d16a2b75d4/1561996082043-APSI6GPJ7N43BYAXCN5B/florabot-1.png")
 flowerbot.photo.attach(io: flowerbot_photo, filename: "flowerbot.png", content_type: "image/png")
-plantprotectbot = Robot.new(address: "8 Avenue des Gobelins, 45000 Orléans", name: "Plant Protect Bot", category: "gardening", description: "No quarter for bugs around here with Plant Protect Bot", price: 650)
+plantprotectbot = Robot.new(address: "30 Rue de la Lionne, 45000 Orléans", name: "Plant Protect Bot", category: "gardening", description: "No quarter for bugs around here with Plant Protect Bot", price: 650)
 plantprotectbot.user = joanne
 plantprotectbot_photo = URI.open("https://www.aafarmer.co.uk/wp-content/uploads/2020/11/Small-Robot-Company-trials-Tom-1.5-credit-Small-Robot-Company-1.jpg")
 plantprotectbot.photo.attach(io: plantprotectbot_photo, filename: "plantprotectbot.png", content_type: "image/png")
-wateringbot = Robot.new(address: "4 Rue de la Bourse, 13002 Marseille", name: "Wateringbot", category: "gardening", description: "This bot likes water and that is why it knows how to use it without waste.", price: 398)
+wateringbot = Robot.new(address: "12 Rue Paradis, 13002 Marseille", name: "Wateringbot", category: "gardening", description: "This bot likes water and that is why it knows how to use it without waste.", price: 398)
 wateringbot.user = joanne
 wateringbot_photo = URI.open("https://www.digitaltrends.com/wp-content/uploads/2016/04/growver-2.jpg?resize=2048%2C1152&p=1")
 wateringbot.photo.attach(io: wateringbot_photo, filename: "wateringbot.png", content_type: "image/png")
