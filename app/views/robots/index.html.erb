@@ -28,7 +28,7 @@
       <% @robots.each do |robot| %>
         <div class="card" data-category-target="item" data-category="<%= robot.category.downcase %>">
           <div class="card-title"><%= link_to "#{robot.name}", robot %></div>
-          <div class="card-photo"><%= image_tag robot.photo if robot.photo.attached? %></div>
+          <div class="card-photo"><%= cl_image_tag robot.photo.key if robot.photo.attached? %></div>
           <div class="card-text"><%= "#{robot.price.round}€" %></div>
         </div>
       <% end %>

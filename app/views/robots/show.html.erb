@@ -13,7 +13,7 @@
         <p>You'll have a lot of fun with <%= @robot.name %>!!</p>
         <p><%= @robot.description %></p>
         <p>Such a jewel of technology for only <%= @robot.price.round %>€</p>
-        <div class="card-photo-show"><%= image_tag @robot.photo if @robot.photo.attached? %></div>
+        <div class="card-photo-show"><%= cl_image_tag @robot.photo.key if @robot.photo.attached? %></div>
         <div class="container d-flex justify-content-center mt-4 py-1">
           <%= link_to "Order", new_robot_order_path(@robot), class: "btn small-btn" %>
           <% if current_user == @robot.user %>
